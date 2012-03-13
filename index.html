@@ -1,0 +1,66 @@
+﻿<html>
+	<head>
+	<link href="main.css" type="text/css" rel="stylesheet"></link>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="strings.js"></script>
+	<script type="text/javascript" src="libs.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="md5.js"></script>
+	<script type="text/javascript">
+	opera.extension.onmessage = function(event) 
+	{
+		thecatch = event.data;
+		if (thecatch == "small")
+            GMButton.popup.height = 180;
+		else if (thecatch == "big")
+           GMButton.popup.height = 1000;
+        else if (thecatch == "message")
+            GMButton.popup.height = 30;
+		else if (thecatch == "FAIL")
+		{
+			GMButton.icon = "/images/icon_gray.png";
+			GMButton.badge.textContent = thecatch;
+		}
+		else if (thecatch == "seticon")
+			GMButton.icon = "/images/icon.png";
+        else
+            GMButton.badge.textContent = thecatch;
+	}
+		
+	function buttonCreate(){
+		GMButton = opera.contexts.toolbar.createItem({
+		title: "Новотелеком.баланс",
+		icon: "/images/icon.png",
+		popup: {
+			href: "popup.html",
+			width: 230,
+			height: 30
+			},
+		badge: {
+			display: "block",
+			color: "white",
+			backgroundColor: "rgba(211, 0, 4, 1)",
+			textContent: ""
+			}
+		});
+		opera.contexts.toolbar.addItem(GMButton);
+	}
+
+	function main()
+	{
+		var thecatch;
+	
+		buttonCreate();
+		
+		initSettings();
+			
+		window.setInterval(draw , 1000*60*60); 
+	}
+	$(document).ready(main);
+	</script>
+	</head> 
+	<body>
+	</body>
+
+</html>
