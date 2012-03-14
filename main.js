@@ -3,13 +3,24 @@
 	try
 	{
 		var rub;
-		{		
+		{	
+			var errorCode = $("errorCode", xml);
+			if (errorCode.length)
+			{
+				error = parseInt(errorCode[0].text);
+				if (error == 1)		
+					throw new Error(strings.inputError);
+				else if (error == 2)
+					throw new Error(strings.innerError);
+				else if (error == 3)
+					throw new Error(strings.methodNotFoundError);
+			}
 			var balance = $("balance", xml);
 			if (balance.length)
 			{
 				var date = new Date();
 				var strDate = date.toLocaleDateString() + " "+date.toLocaleTimeString();
-				outDate = strDate.substring(0,16);
+				outDate = strDate.substring(0,22);
 				$('#date').text(outDate);
 				rub = parseFloat(balance[0].textContent).toFixed(2);
 				if (typeof (GMButton) == "undefined")
