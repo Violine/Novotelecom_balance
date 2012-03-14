@@ -1,0 +1,63 @@
+﻿<!doctype html>
+<html>
+	
+	<head>
+	<link href="main.css" type="text/css" rel="stylesheet"></link>
+    <style type="text/css">
+    .date {
+	margin: -15px 5px 0px 0px;
+	text-align: right;
+	font-size: 80%;
+	}
+    </style>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="strings.js"></script>
+	<script type="text/javascript" src="libs.js"></script>
+	<script type="text/javascript" src="main.js"></script>
+	<script type="text/javascript" src="md5.js"></script>
+	<script type="text/javascript">
+		function main()
+	{
+		initSettings();
+			
+		window.setInterval(draw, 1000*60*60); 
+	}
+	$(document).ready(main);
+	</script>
+	</head> 
+	<body>  
+	<div id="extentionContent" class="ntk-sidebar-right">
+		<div class="rxt personal">
+			<div class="rxt-content">
+				<h2 id="first_name">Имя<br>Отчество<br>Фамилия</h2>
+				<span>Договор №<span id="contractId"></span></span>			
+			</div>
+		</div>
+		<div class="rxt personal-physical">
+			<div class="rxt-content">
+				<h1 id="balance">></h1>
+					<div class="porog" id="days2BlockStr"><nobr>_</nobr></div>
+					<span class="porog">Порог отключения: <b id="debetBound"></b></span><br>
+				<div id="debet" style="display:none">
+				<div class="separate"><!-- --></div>
+				<center>
+					<span style="color: white;">Включена отсрочка платежа</span>
+				</center>
+			</div>
+			<div class="separate"><!-- --></div>
+					<div class="date">
+						<span>Обновлено:</span>
+						<span  id="date">12.05.2011 12:18</span>
+					</div>
+				</div>
+			<div class="rxt-bot">
+				<div class="trans"><!-- --></div>
+		  <div class="r-l"><!-- --></div> 		
+		  <div class="r-r"><!-- --></div>		</div>
+			</div>				
+		</div>
+	</div>
+	<div id="message"><!-- --></div>
+	</body> 
+</html>	

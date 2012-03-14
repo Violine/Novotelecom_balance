@@ -1,0 +1,44 @@
+﻿<!doctype html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+  <link rel="stylesheet" href="options.css">
+  <title id="widget-title">Новотелеком.Баланс</title>
+  <script type="text/javascript" src="main.js"></script>
+  <script type="text/javascript" src="jquery.js"></script>
+  <script type="text/javascript" src="libs.js"></script>
+  <script type="text/javascript" src="settings.js"></script>
+  <script type="text/javascript" src="md5.js"></script>
+</head>
+<body>
+  <header>
+    <img src="images/logo_options.png">
+    <h1 id="widget-name">Новотелеком.Баланс v1.3</h1>
+  </header>
+
+  <section>
+    <p>Расширение браузера для отображения баланса. Провайдер ООО "Новотелеком" г. Новосибирск</p>
+    <h3 align="center">НАСТРОЙКИ</h3><br>
+	 <fieldset>
+		<form id = "myForm">
+				<div>
+					<label for="login">Логин<b>:</b></label>
+					<input id="login" type="text" value="" onkeydown="settingsChange()">
+				</div>
+				<div>
+					<label for="password">Пароль<b>:</b></label>
+					<input id="password" type="password" value="" onkeydown="settingsChange()">
+				</div>
+			<div id="footer" class="button">
+				<button id="save-button" style="font-weight:bold"  class="button" onclick="settingsSave()">Сохранить</button>
+				<button  class="button" onclick="settingsCancel()">Отмена</button>
+			</div>
+		</form>
+	 </fieldset>
+  </section>
+
+  <footer>
+    <p>Франскевич Евгений, Коровин Александр</p>
+  </footer>
+</body>
+</html>

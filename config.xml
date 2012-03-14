@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget xmlns="http://www.w3.org/ns/widgets" id="https://addons.opera.com/addons/extensions/details/novotelekombalans/" version="1.4">
+  <name>Новотелеком.баланс</name>
+  <icon src="images/logo_default.png"/>
+  <access origin="https://api.novotelecom.ru"/>
+  <license>Copyright 2011 SanyaX2010. All rights reserved.</license>
+  <author>SanyaX2010</author>
+  <update-description href="https://extension-updates.opera.com/api/w3c-wd1/update/8ce1c524-5bab-4cb7-9ba7-73680d021519/"/>
+  <description xml:lang="ru">Отображает баланс (Оператор "Новотелеком" город Новосибирск)
+
+Для абонентов провайдера Новотелеком, города Новосибирска. &#13;
+Расширение не официальное. &#13;
+Сначала необходимо в настройках ввести логин и пароль биллинга.&#13;
+После нажатия на кнопку сохранить, баланс должен сразу же отобразиться на иконке, после чего для подробной информации нужно по ней кликнуть.</description>
+</widget>
